@@ -11,7 +11,7 @@ A lightweight event bus written in Kotlin.
 ## Installation
 Gradle:
 ```
-implementation 'com.yundom:RxVan:1.0.0'
+implementation 'com.yundom:RxVan:1.0.1'
 ```
 
 Maven:
@@ -19,7 +19,7 @@ Maven:
 <dependency>
   <groupId>com.yundom</groupId>
   <artifactId>rxvan</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```

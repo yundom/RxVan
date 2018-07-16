@@ -1,7 +1,7 @@
 buildscript {
     ext.kotlin_version = '1.2.50'
     ext.junit_version = '4.12'
-    ext.version_name = '1.0.0'
+    ext.version_name = '1.0.1'
 
     repositories {
         mavenCentral()
@@ -75,11 +75,4 @@ dependencies {
     compile "io.reactivex.rxjava2:rxjava:2.1.14"
 
     testCompile "junit:junit:$junit_version"
-}
-
-compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
-compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
 }
