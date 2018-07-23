@@ -1,8 +1,8 @@
 ![RxVan Logo](https://github.com/yundom/RxVan/blob/master/images/logo.png)
 
 # RxVan
-[![CircleCI branch](https://img.shields.io/circleci/project/yundom/RxVan/master.svg)](https://circleci.com/gh/yundom/RxVan/tree/master)
-[![GitHub license](https://img.shields.io/github/license/yundom/RxVan.svg)](https://github.com/yundom/RxVan/blob/master/LICENSE)
+[![CircleCI branch](https://circleci.com/gh/yundom/RxVan.svg?style=shield&circle-token=a3cf3f1009b4fb1b1d4aace674682a9d010e18c8)](https://circleci.com/gh/yundom/RxVan/tree/master)
+[![GitHub license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A lightweight event bus written in Kotlin.
 
@@ -44,21 +44,21 @@ RxVan.get().observe<Pizza>().subscribe({
 RxVan().get().post(Pizza("Margherita"))
 ```
 
-## Register and unregister your observer
+## How to register and unregister your observer
 ``` kotlin
 class PizzaOrderActivity : Activity {
 
   private val subscription: Disposable? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
-    // Keep your subscription in the disposable.
+    // You can keep the subscription in a disposable.
     subscription = RxVan.get().observe<Pizza>().subscribe({
       println("Eat ${it.pizzaSlice}")
     })
   }
 
   override fun onDestroy() {
-    // Dispose it when no longer needed.
+    // Then dispose it when no longer needed.
     subscription?.dispose()
   }
 }
